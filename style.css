@@ -1,0 +1,8 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Gill Sans', sans-serif;
+}
+.main-bar{
+    background-image: linear-gradient(to right, #6db9ef, #7ce88a);
+}
