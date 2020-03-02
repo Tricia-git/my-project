@@ -4,5 +4,61 @@
     font-family: 'Gill Sans', sans-serif;
 }
 .main-bar{
-    background-image: linear-gradient(to right, #6db9ef, #7ce88a);
+    background-image: linear-gradient(rgba(0,0,0,0.5), 
+    rgba(0,0,0,0.5));
+}
+.nav-link {
+    font-size:16px;
+    color:#6db9ef !important;
+    margin:2px;
+}
+.navbar-nav{
+    text-align:right;
+}
+.main-bar .navbar-toggler{
+padding-right:0;
+outline:none;
+border:none;
+}
+.banner{
+    height:80vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), 
+    rgba(0,0,0,0.5)), url(images/hr.jpg);
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+     
+}
+.banner text-center{
+    text-align:center;
+}
+.banner h1{
+    padding-top:170px;
+    font-size:50px;
+    letter-spacing:6px;
+    font-weight:600;
+    text-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+.search-job{
+    margin:-50px 6% 50px;
+    padding:30px 0;
+    background-image: linear gradient(to right,
+    #6db9ef, #7ce08a);
+}
+ .search-job .form{
+    max-width:250px;
+    display:inline-flex;
+    margin:10px 5px;
+    border-radius:0;
+    border-color:darkcyan;
+    box-shadow:none !important;
+    border:none !important;
+} 
+.search-job .btn-primary{
+    border-radius:0;
+    box-shadow:none !important;
+    border:none;
+    display:inline-flex;
+    margin:5px;
+    padding:5px 20px;
 }
