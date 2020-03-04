@@ -4,12 +4,98 @@
 
 </head>
 <body>
-    <form action ="#" method="post">
-        <input type ="text" name="username">
-        <input type ="email" name="Email">
-        <input type ="password" name="Password">
-        <input type ="Password" name="Password_confirmation">
-        <input type ="text" name="username">
-    </form>
+    <div id ="wrapper">
+        <form method ="POST" action="home.html" onsubmit="return validate()" name="vform">
+            <div>
+                <input type ="text" name ="username" class="textinput" placeholder="username">
+                <div id="name_error" class= "val_error"></div>
+            </div>
+            <div>
+                <input type ="email" name ="username" class="textinput" placeholder="email">
+                <div id="email_error" class= "val_error"></div>
+            </div>
+            <div>
+                <input type ="password" name ="username" class="textinput" placeholder="password">
+                <div id="password_error" class= "val_error"></div>
+            </div>
+            <div>
+                <input type ="password" name ="username" class="textinput" placeholder="password_confirmation">
+                <div id="password_error" class= "val_error"></div>
+            </div>
+            <div>
+                <input type ="submit" value ="Register" class="btn" name="register">
+            
+            </div>
 
+
+
+
+
+        </form>
+    </div>
 </body>
+<!--------adding javascript-->
+<script type= "text/javascript">
+//getting all input text objects
+var name = document.forms["vform"]["username"];
+var email = document.forms["vform"]["email"];
+var password = document.forms["vform"]["password"];
+//getting all error object
+var name_error= document.getElementById("name_error");
+var email_error= document.getElementById("email_error");
+var password_error= document.getElementById("password_error");
+
+// setting all event listener
+username.addEventListener("blur" nameverify, true);
+email.addEventListener("blur" emailverify, true);
+password.addEventListener("blur" paaswordverify, true);
+
+// validation function
+function validate(){
+    //username validation
+    if(username.value ==""){
+        username.style.border ="1px solid red";
+        name_error.textcontent="username is required";
+        username.focus();
+        return false;
+    }
+    if(email.value ==""){
+      email.style.border ="1px solid red";
+        email_error.textcontent="username is required";
+        email.focus();
+        return false;
+    }
+    if(password.value ==""){
+        password.style.border ="1px solid red";
+       password_error.textcontent="password is required";
+        password.focus();
+        return false;
+    }
+}
+// event handler function
+function nameverify(){
+    if(username.value !=""){
+        username.style.border ="1px solid #5E6E66";
+       username_error.innerHtml="";
+       return true;
+    }
+}
+    function emailVerify(){
+    if(email.value !=""){
+        email.style.border ="1px solid #5E6E66";
+       email_error.innerHtml="";
+       return true;
+    }
+}
+    function passwordVerify(){
+    if(password.value !=""){
+        password.style.border ="1px solid #5E6E66";
+       password_error.innerHtml="";
+       return true;
+    }
+}
+
+
+
+
+</script>
